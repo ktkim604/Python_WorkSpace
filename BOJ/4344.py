@@ -1,5 +1,3 @@
-from numpy import percentile
-
 
 C = int(input())
 for i in range(C):
