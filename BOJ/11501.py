@@ -14,4 +14,5 @@ for i in range(t):
         else:
             result += max_price - price[j]
             
-    print(result)       
+    print(result)
+          
