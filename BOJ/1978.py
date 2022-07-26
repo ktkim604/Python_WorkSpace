@@ -9,7 +9,6 @@ for i in k:
     for j in range(1, i+1):
         if (i % j) == 0:
             cnt += 1
-            print(cnt, i, j)
         
     if cnt == 2:
         result += 1
