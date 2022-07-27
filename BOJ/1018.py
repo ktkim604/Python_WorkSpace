@@ -24,7 +24,7 @@ for j in range(n1-7):
                         index_B += 1
         count.append(min(index_W,index_B))
         
-print(min(count))            
-                
+print(min(count))          
+    
             
         
