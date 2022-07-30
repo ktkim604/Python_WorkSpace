@@ -14,7 +14,7 @@ for card in n1:
         cnt[card] += 1
     else:
         cnt[card] = 1
-
+        
 def search_binary(target, data, start, end):
     
     if start > end:
