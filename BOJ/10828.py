@@ -1,9 +1,9 @@
-n = int(input())
-
+import sys
+n = int(sys.stdin.readline())
 stack = []
 
 for i in range(n):
-    t = list(map(str, input().split()))
+    t = list(map(str, sys.stdin.readline().split()))
     if len(t) > 1:
         stack.append(int(t[1]))
     
