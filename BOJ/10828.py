@@ -1,3 +1,4 @@
+# 스택 기본구조 (파이썬에선 리스트 형태)
 import sys
 n = int(sys.stdin.readline())
 stack = []
@@ -28,6 +29,7 @@ for i in range(n):
                 print(stack[-1])
             else:
                 print(-1)
+                
         
 
     
