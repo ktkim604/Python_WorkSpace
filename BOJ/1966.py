@@ -1,7 +1,7 @@
 import sys
 n = int(input())
 
-for i in range(3):
+for i in range(n):
     m1, m2 = map(int, sys.stdin.readline().split())
     a = list(map(int, sys.stdin.readline().split()))
     idx = [0 for i in range(m1)]
