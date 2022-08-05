@@ -18,7 +18,7 @@ def mid(data):
 
 def frequency(data):
     frequency_num = Counter(num)
-    return frequency_num(1)[0][0]
+    return frequency_num
 
 def size(data):
     size_num = num[-1] - num[0]
@@ -28,6 +28,9 @@ print(avg(num))
 print(mid(num))
 print(frequency(num))
 print(size(num))
+
+
+
     
 
 
