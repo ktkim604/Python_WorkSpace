@@ -13,12 +13,18 @@ def avg(data):
     return round(avg_num)
 
 def mid(data):
-    mid_num = (len(data) // 2) + 1
-    return mid_num
+    mid_num = (len(data) // 2)
+    return num[mid_num]
 
 def frequency(data):
-    frequency_num = Counter(num)
-    return frequency_num
+    cnt = Counter(data).most_common(2)
+    if len(data) > 1:
+        if cnt[0][1] == cnt[1][1]:
+            return cnt[1][0]
+        else:
+            return cnt[0][0]
+    else:
+        return cnt[0][0]
 
 def size(data):
     size_num = num[-1] - num[0]
@@ -28,6 +34,10 @@ print(avg(num))
 print(mid(num))
 print(frequency(num))
 print(size(num))
+
+
+
+
 
 
 
