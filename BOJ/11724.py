@@ -31,7 +31,6 @@ cnt = 0
 for j in range(1, n+1):
     if not visited[j]:
         bfs(graph, j, visited)
-        print(visited)
         cnt += 1
 print(cnt)
     
