@@ -20,8 +20,6 @@ def bfs(x, y):
                 q.append((cnt+1, nx, ny)) 
 
 
-
-
 for _ in range(int(input())):
     l = int(input())
     start_x, start_y = map(int, input().split())

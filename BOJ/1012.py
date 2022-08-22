@@ -15,7 +15,6 @@ def bfs(x, y):
             if 0 <= nx < n and 0 <= ny < m and graph[nx][ny] == 1: 
                 q.append((nx, ny))
                 graph[nx][ny] = 2
-                print(graph)
                 
     return 1
 

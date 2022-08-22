@@ -15,8 +15,7 @@ def bfs(x, y):
             if 0 <= nx < h and 0 <= ny < w:
                 if graph[nx][ny] == 1 and not visited[nx][ny]:
                     visited[nx][ny] = 1
-                    q.append((nx, ny))
-    
+                    q.append((nx, ny))    
 
 
 while True:

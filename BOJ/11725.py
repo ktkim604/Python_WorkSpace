@@ -28,6 +28,7 @@ for i in range(1, n):
 visited = [0] * (n+1)
 bfs(1)
 
+# 2번째 노드부터 체크 
 for i in range(2, n+1):
     print(visited[i])
     

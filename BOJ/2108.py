@@ -34,14 +34,3 @@ print(avg(num))
 print(mid(num))
 print(frequency(num))
 print(size(num))
-
-
-
-
-
-
-
-    
-
-
-
