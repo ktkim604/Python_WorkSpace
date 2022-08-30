@@ -1,6 +1,7 @@
 from collections import deque
 import sys
 
+# bfs 너비 우선 탐색 
 def bfs(node):
     q = deque()
     q.append((1, node))
