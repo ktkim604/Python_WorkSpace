@@ -26,12 +26,12 @@ for i in range(n):
 
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
-
+# 0으로 시작하는 부분 출발 지점
 for j in range(m):
     if graph[0][j] == 0:
         bfs(0,j)
         
-if 2 in graph[n-1]:
+if 2 in graph[-1]:
     print("YES")
 else:
     print("NO")
