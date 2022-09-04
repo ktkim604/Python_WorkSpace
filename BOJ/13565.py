@@ -1,6 +1,7 @@
 from collections import deque
 import sys
 
+
 def bfs(x,y):
     q = deque()
     q.append((x,y))
@@ -23,7 +24,7 @@ graph = []
 for i in range(n):
     graph.append(list(map(int, input())))
     
-
+#찾는 방향 설정
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
 # 0으로 시작하는 부분 출발 지점
