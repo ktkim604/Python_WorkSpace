@@ -31,4 +31,5 @@ for i in range(n):
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
 
-print(bfs(0,0))
+ans =  bfs(0,0)
+print(ans)

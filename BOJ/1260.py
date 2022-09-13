@@ -3,7 +3,7 @@ from collections import deque
 
 n, m, start = map(int, sys.stdin.readline().split())
 
-
+# 그래프 만들기
 graph = [[] for _ in range(n+1)]
 
 for _ in range(m):
