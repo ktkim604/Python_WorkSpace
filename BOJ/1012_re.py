@@ -15,6 +15,8 @@ def bfs(x,y):
             if 0 <= nx < n and 0 <= ny < m and graph[nx][ny] == 1: 
                 q.append((nx, ny))
                 graph[nx][ny] = 2
+                
+    return 1
         
     
     
@@ -35,6 +37,9 @@ for i in range(t):
     for i in range(n):
         for j in range(m):
             cnt += bfs()
+    
+    print(cnt)  
+
         
         
     
