@@ -9,10 +9,12 @@ for i in range(int(input())):
     n = int(input())
     
     if n == 0:
-        if len(heap):
-            print(heapq.heappop(heap))
+        if len(heap):  # 힙이 비어있을때 heappop 메소드 호출하면 오류발생 함.
+            print(heapq.heappop(heap)) 
+            print(heap)
         else:
             print(0)
             
     else:
         heapq.heappush(heap, n)
+        
