@@ -4,10 +4,10 @@ import heapq
 input = sys.stdin.readline
 
 heap = []
-
+print(heap)
 for i in range(int(input())):
     n = int(input())
-    
+
     if n == 0:
         if len(heap):  # 힙이 비어있을때 heappop 메소드 호출하면 오류발생 함.
             print(heapq.heappop(heap)) 
