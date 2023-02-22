@@ -32,15 +32,16 @@ for i in range(1, N+1):
     temp = list(map(int, input().split()))
     graph[i].extend(temp[1:])               # 그래프에 해당 노드 인접한 노드들 저장
     
-print(graph)
-V = [i for i in range(1, N+1)]
+
+V = [i for i in range(1, N+1)]              # 노드 번호
 res = 9e9
 
-for i in range(1, N//2+1):
-    for g1 in combinations(V, i):
-        g2 = []
+for i in range(1, N//2+1):                  # 구역 나누기
+    for g1 in combinations(V, i):           # 조합 사용하여 
+        print(g1)
+        g2 = []                            
         for j in V:
-            if j not in g1:
+            if j not in g1:                 
                 g2.append(j)
                 
         if bfs(g1) and bfs(g2):
