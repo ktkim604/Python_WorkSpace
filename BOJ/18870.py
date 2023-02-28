@@ -10,6 +10,5 @@ dict = {}
 for i in range(len(ans)):
     dict[ans[i]] = i
     
-print(dict)
 for i in temp:
     print(dict[i], end=' ')

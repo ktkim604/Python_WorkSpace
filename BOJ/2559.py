@@ -7,5 +7,4 @@ ans.append(sum(arr[:K]))
 for i in range(N-K):
     ans.append(ans[i] - arr[i] + arr[K+i])
 
-print(ans)
 print(max(ans))

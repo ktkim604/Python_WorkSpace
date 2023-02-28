@@ -19,7 +19,7 @@ def bfs():
             ny = y + dy[i]
             
             if 0 <= nx < N and 0 <= ny < M and not visited[nx][ny][crash]:
-                if crash and graph[nx][ny] == 1:
+                if crash > 0 and graph[nx][ny] == 1 and not visited[nx][ny][crash-1]:
                     q.append((nx,ny,cnt+1,crash-1))
                     visited[nx][ny][crash-1] = 1
                     
@@ -29,12 +29,10 @@ def bfs():
                     
     return -1
                     
-    
-    
 
 N, M, K = map(int, input().split())
 
-graph = [list(map(int, input().strip())) for _ in range(N)]
+graph = [list(map(int, input().rstrip())) for _ in range(N)]
 visited = [[[0] * (K+1) for _ in range(M)] for _ in range(N)]
 
 
@@ -44,6 +42,3 @@ dy = [0,0,-1,1]
 ans = bfs()
 
 print(ans)
-
-
-

@@ -22,12 +22,10 @@ for j in num:
        else:
            if q.index(j) <= len(q) // 2:
                q.rotate(-1)
-               print(q)
                cnt += 1
                
            else:
                q.rotate(1)
-               print(q)
                cnt += 1
                
 print(cnt)

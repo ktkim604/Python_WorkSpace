@@ -4,7 +4,7 @@ import heapq
 input = sys.stdin.readline
 
 heap = []
-print(heap)
+
 for i in range(int(input())):
     n = int(input())
 

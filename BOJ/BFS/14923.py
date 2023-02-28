@@ -5,7 +5,7 @@ from collections import deque
 def bfs():
     q = deque()
     q.append((Hx-1,Hy-1,0,1))
-    visited = [[[0] * 2 for _ in range(M)] for _ in range(N)]
+    visited = [[[0] for _ in range(M)] for _ in range(N)]
     visited[Hx-1][Hy-1][1] = 1
     
     while q:
@@ -20,12 +20,12 @@ def bfs():
             if 0 <= nx < N and 0 <= ny < M and visited[nx][ny][magic] == 0:
                 
                 if magic == 1 and graph[nx][ny] == 1:           # 지팡이가 있고 벽을 만났을때
-                    visited[nx][ny][1] = 1                      # 벽을 부수면서(즉, 지팡이 하나를 쓰면서) 방문처리
-                    q.append((nx,ny,cnt+1,magic-1))             # 거리 1 추가하면서 지팡이 하나 쓴값을 제거해주고 다시 어팬드
+                    visited[nx][ny][0] = 1                      # 지팡이를 쓴 경우에 방문처리
+                    q.append((nx,ny,cnt+1,0))                   # 거리 1 추가하면서 지팡이 하나 쓴값을 제거해주고 다시 어팬드
                 
-                elif graph[nx][ny] == 0:                        # 
-                    visited[nx][ny][magic] = 1
-                    q.append((nx,ny,cnt+1,magic))
+                elif graph[nx][ny] == 0:                        # 벽이 없는 경우
+                    visited[nx][ny][magic] = 1                  # 지팡이가 아직 남아있는 경우 방문처리
+                    q.append((nx,ny,cnt+1,magic))               # 여전히 남아있는 지팡이를 함께 어팬드
                 
     return -1
 

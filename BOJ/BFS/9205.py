@@ -37,5 +37,3 @@ for _ in range(t):
     
     ans = bfs(home[0], home[1])
     print(ans)
-    
-    

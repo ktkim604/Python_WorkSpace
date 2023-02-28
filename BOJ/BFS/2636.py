@@ -9,7 +9,7 @@ def bfs():
     q.append((0,0))
     visited[0][0] = 1
     cnt = 0
-    
+
     while q:
         x,y = q.popleft()
         
@@ -27,10 +27,10 @@ def bfs():
                     graph[nx][ny] = 0
                     visited[nx][ny] = 1
                     cnt += 1
-                    
+
     cheese.append(cnt)
     return cnt
-                    
+
 
 N, M = map(int, input().split())
 

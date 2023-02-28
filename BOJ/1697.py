@@ -11,7 +11,7 @@ def bfs(s,c):
         
         for i in range(3):
             nx = x + dx[i]
-            if 0 < nx < 100001:
+            if 0 <= nx < 100001:
                 if visited[nx] == 0:            # 수빈이가 방문안한 위치라면
                     visited[nx] = cnt + 1
                     q.append((nx, cnt+1))

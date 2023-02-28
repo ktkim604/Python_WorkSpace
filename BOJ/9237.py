@@ -10,4 +10,3 @@ for i in range(1, len(t_list)+1):
     growing_up.append(i + t_list[i-1])
     
 print(max(growing_up)+1)
-

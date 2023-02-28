@@ -29,7 +29,7 @@ def bfs(r):
         
     return cnt
             
-            
+
 n = int(input())
 node = list(map(int, input().split()))
 delete = int(input())

@@ -8,21 +8,24 @@ def bfs(a):
 
     while q:
         x = q.popleft()
+        dx = [1,-1,x]
         
         if x == K:
             return visited[K]
         
-        for next in (x-1, x+1, x*2):
-            if 0 <= next < 100001 and visited[next] == 0:
-                if next == x*2:                      # 순간이동 하는 경우
-                    visited[next] = visited[x]    # 0초로 갱신 
-                    q.appendleft(next)            # 비용 0인 *2인 연산을 최우선적으로 처리하기위해
+        for i in range(3):
+            
+            nx = x + dx[i]
+            
+            if 0 <= nx < 100001 and visited[nx] == 0:
+                if nx == x*2 and nx != 0:                      # 순간이동 하는 경우
+                    visited[nx] = visited[x]    # 0초로 갱신 
+                    q.appendleft(nx)            # 비용 0인 *2인 연산을 최우선적으로 처리하기위해
                     
                 else:                           # 걸어서 이동하는 경우
-                    visited[next] = visited[x] + 1
-                    q.append(next)
-                        
-                        
+                    visited[nx] = visited[x] + 1
+                    q.append(nx)
+                       
 
 N, K = map(int, input().split())
 visited = [0] * 100001

@@ -13,7 +13,7 @@ def bfs(a,b):
             nx = x + dx[i]
             ny = y + dy[i]
             
-            if 0 <= nx < n and 0 <= ny < n and visited[nx][ny] == 0 and graph[x][y] == graph[nx][ny]:
+            if 0 <= nx < n and 0 <= ny < n and visited[nx][ny] == 0 and graph[x][y] == graph[nx]:
                 q.append((nx,ny))
                 visited[nx][ny] = 1
                 

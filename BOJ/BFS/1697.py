@@ -19,7 +19,7 @@ def bfs(s,c):
             if visited[nx] == 0:        # Nx 방문을 안했다면
                 q.append((nx, cnt+1))   # 큐에 해당 수 어펜드
                 visited[nx] = cnt+1         # 해당 위치에 최소 도달 시간 입력
-                
+    
             elif visited[nx]:           # 방문을 했다면
                 if cnt + 1 < visited[nx]:
                     visited[nx] = cnt + 1

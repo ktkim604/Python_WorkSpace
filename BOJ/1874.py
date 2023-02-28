@@ -8,10 +8,12 @@ flag = 0
 for i in range(n):
     num = int(input())
     
-    while cnt <= num:
-        stack.append(cnt)
+    for j in range(cnt, num+1):
+        stack.append(j)
         ans.append('+')
         cnt += 1
+        if cnt >= num:
+            continue
         
     if stack[-1] == num:
         stack.pop()
@@ -20,6 +22,7 @@ for i in range(n):
     else:
         print('NO')
         flag = 1
+        break
         
 if flag == 0:
    for i in ans:

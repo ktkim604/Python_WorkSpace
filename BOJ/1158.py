@@ -1,14 +1,13 @@
 # 요세푸스 문제
-from collections import deque
-
 N, K = map(int, input().split())
+
 q = [i for i in range(1, N+1)]
+dq = []
+key = 0
 
-for i in range(N):
+while q:
+    key = (key + (K-1)) % len(q)
+    temp = q.pop(key)
+    dq.append(str(temp))
     
-    dq = deque(q)
-    dq.rotate(K+2)
-    q = list(dq)
-    
-
-    print(q)
+print('<%s>' %(', '.join(dq)))

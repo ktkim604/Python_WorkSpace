@@ -15,8 +15,6 @@ def find_max(new_graph):
             # if new_graph[i][j] == '*':                  # 비활성 -> 활성 안된 놈도 큰수 리턴
             #     return int(1e9)
             if type(new_graph[i][j]) is int:            # 그래프 좌표를 하나씩 돌며 그놈의 타입이 int형이라면
-                print(new_graph[i][j])
-                print()
                 max_time = max(max_time, new_graph[i][j])    # 바이러스가 다 번진 경우 그 그래프에 해당하는 최대값을 찾아냄
     return max_time                                     # 해당 max_time 리턴
 
@@ -52,7 +50,7 @@ def bfs(v):
                         new_graph[nx][ny] = cnt
                     elif new_graph[nx][ny] == "*":      # 비활성 바이러스 만나면
                         new_graph[nx][ny] = "**"        # 활성 바이러스로 바꿔주는 표시 '**'
-                        q2.append([nx, ny])            
+                        q2.append([nx, ny])             
         for elem in q2:                                 # q에 담긴 놈들 다 빠지고 작은 무한루프 탈출시에 다시 q에 탐색 요소들 어팬드
             q.append(elem)
         if len(q) == 0:                                 # 이렇게 돌면서 q에 담긴 놈들이 없으면 큰 무한루프 탈출

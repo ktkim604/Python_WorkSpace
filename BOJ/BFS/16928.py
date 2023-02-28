@@ -31,7 +31,6 @@ def bfs():
                 
 
 N,M = map(int, input().split())
-graph = [0] * 101
 visited = [0] * 101
 
 ladders = dict()
@@ -46,6 +45,3 @@ for _ in range(M):
     snakes[i] = j
     
 print(bfs())
-    
-
-

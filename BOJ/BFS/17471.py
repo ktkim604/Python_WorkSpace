@@ -17,6 +17,7 @@ def bfs(group):
             if v in group and visit[v] == 0:
                 q.append(v)
                 visit[v] = 1
+                
     for g in group:
         if visit[g] == 0:
             return False

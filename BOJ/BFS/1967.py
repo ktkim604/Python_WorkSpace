@@ -27,10 +27,6 @@ def bfs(s,c):
     return temp[0][0], temp[0][1]
                 
 
-            
-        
-                
-
 N = int(input())
 graph = [[] for _ in range(N+1)]
 
@@ -42,7 +38,3 @@ for i in range(N-1):
 start, count1 = bfs(1,0)
 last, count2 = bfs(start, 0)
 print(count2)
-
-
-
-

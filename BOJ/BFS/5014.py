@@ -22,7 +22,6 @@ def bfs(a, c):
                     
     return visited[G]
                 
-        
 
 F, S, G, U, D = map(int, input().split())
 visited = [0] * (F+1)
@@ -32,6 +31,9 @@ ans = bfs(S, 0)
 
 if ans == 0:
     print('use the stairs')
+    
+elif S == G:
+    print(0)
     
 else:
     print(ans)

@@ -16,7 +16,7 @@ for target in range(257):
                 
             else:
                 min += target - graph[i][j]
-    print(max, min)
+    
     if max + b >= min:
         if min + (max * 2) <= answer:
             answer = min + (max * 2)

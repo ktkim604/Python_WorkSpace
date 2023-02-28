@@ -21,8 +21,7 @@ def bfs(a,b):
                     P.append((nx,ny))                   # 공유하고 있는 나라의 좌표를 P리스트에 추가 
                     
     return P
-                    
-                    
+                                    
 N, L, R = map(int, input().split())
 A = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
 
@@ -40,8 +39,7 @@ while True:
             if visited[i][j] == 0:
                 visited[i][j] = 1
                 ans = bfs(i,j)
-
-                
+   
                 if len(ans) > 1:
                     flag = 1
                     num = sum([(A[x][y]) for x,y in ans]) // len(ans)

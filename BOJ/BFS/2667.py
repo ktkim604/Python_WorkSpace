@@ -19,8 +19,6 @@ def bfs(a,b):
                 cnt += 1
                 
     return cnt
-        
-
 
 
 n = int(input())

@@ -36,11 +36,11 @@ visited = [[0] * M for _ in range(N)]
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
 
-answer = 10000
+answer = 10001
 ans = bfs(0,0,0)
 
-if ans <= T: 
-    print(ans)
+if ans > T: 
+    print('Fail')
     
 else:
-    print('Fail')
+    print(ans)
