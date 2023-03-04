@@ -19,4 +19,4 @@ for p in range(1, N+1):
         elif ans[i] == 0:
             cnt += 1
             
-print(ans)
+print(*ans)
