@@ -45,8 +45,7 @@ while True:
             graph[i][j] -= cnt[i][j]
             if graph[i][j] < 0:
                 graph[i][j] = 0
-    
-    print(graph)
+
     
     if len(ans) == 0 or len(ans) >= 2:
         break

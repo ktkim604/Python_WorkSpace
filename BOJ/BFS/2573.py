@@ -94,9 +94,3 @@ while True:
         break
     
     res += 1
-
-    
-
-    
-
-    
